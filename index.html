@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    (function (docElem) {
+        //polyfills
+        if (!Object.assign || !docElem.closest || !String.prototype.includes || !window.cancelAnimationFrame || !Array.from || !Array.prototype.find) { //  || !docElem.before || !docElem.queryAll || !window.fetch
+//            document.write('<script src="js/_rb_polyfills.js"><\/script>');
+        }
+        var table = document.createElement('table');
+        [['Promise', window.Promise], ['Object.assign', Object.assign], ['closest', docElem.closest], ['Array.prototype.includes', Array.prototype.includes], ['Array.from', Array.from]].forEach(function(feature){
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + feature[0] + '</td><td>' + (!!(feature[1])) + '</td>';
+            table.appendChild(tr);
+        });
+
+        document.body.appendChild(table);
+    })(document.documentElement);
+</script>
+</body>
+</html>

@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="http://afarkas.github.io/lazysizes/plugins/respimg/ls.respimg.min.js"></script>
+    <script src="http://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
 </head>
 <body>
+<picture>
+    <!--[if IE 9]><audio><![endif]-->
+    <source
+            data-srcset="//lorempixel.com/710/533/people/9/"
+            media="(max-width: 990px)" />
+    <source
+            data-srcset="//lorempixel.com/930/698/people/8/"
+            media="(max-width: 1024px)" />
 
+    <source
+            data-srcset="//lorempixel.com/1130/848/people/" />
+    <!--[if IE 9]></audio><![endif]-->
+    <img
+            class="lazyload"
+            data-src="//lorempixel.com/930/698/people/8/"
+            alt="image with artdirection" />
+</picture>
 <script>
     (function (docElem) {
         //polyfills
@@ -13,7 +31,7 @@
 //            document.write('<script src="js/_rb_polyfills.js"><\/script>');
         }
         var table = document.createElement('table');
-        [['Promise', window.Promise], ['Object.assign', Object.assign], ['closest', docElem.closest], ['Array.prototype.includes', Array.prototype.includes], ['Array.from', Array.from]].forEach(function(feature){
+        [['userAgent', navigator.userAgent], ['Promise', window.Promise], ['Object.assign', Object.assign], ['closest', docElem.closest], ['Array.prototype.includes', Array.prototype.includes], ['Array.from', Array.from]].forEach(function(feature){
             var tr = document.createElement('tr');
             tr.innerHTML = '<td>' + feature[0] + '</td><td>' + (!!(feature[1])) + '</td>';
             table.appendChild(tr);

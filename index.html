@@ -5,25 +5,19 @@
     <title>Title</title>
     <script src="https://afarkas.github.io/lazysizes/plugins/respimg/ls.respimg.min.js"></script>
     <script src="https://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
+    <style>
+        img {
+            display: block;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<picture>
-    <!--[if IE 9]><audio><![endif]-->
-    <source
-            data-srcset="//lorempixel.com/710/533/people/9/"
-            media="(max-width: 990px)" />
-    <source
-            data-srcset="//lorempixel.com/930/698/people/8/"
-            media="(max-width: 1024px)" />
-
-    <source
-            data-srcset="//lorempixel.com/1130/848/people/" />
-    <!--[if IE 9]></audio><![endif]-->
-    <img
-            class="lazyload"
-            data-src="//lorempixel.com/930/698/people/8/"
-            alt="image with artdirection" />
-</picture>
+<img sizes="930px" data-sizes="auto" data-src="https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg" data-srcset="https://farm5.staticflickr.com/4078/5441060528_31db7838ba_m.jpg 240w,
+	https://farm5.staticflickr.com/4078/5441060528_31db7838ba_n.jpg 320w,
+	https://farm5.staticflickr.com/4078/5441060528_31db7838ba.jpg 500w,
+	https://farm5.staticflickr.com/4078/5441060528_31db7838ba_z.jpg 640w,
+	https://farm5.staticflickr.com/4078/5441060528_31db7838ba_b.jpg 1024w" class="no-src lazyload" />
 <script>
     (function (docElem) {
         var table = document.createElement('table');

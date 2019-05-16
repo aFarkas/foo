@@ -21,7 +21,7 @@
 <script>
     (function (docElem) {
         var table = document.createElement('table');
-        [['Promise', window.Promise], ['Object.assign', Object.assign], ['closest', docElem.closest], ['Array.prototype.includes', Array.prototype.includes], ['Array.from', Array.from]].forEach(function(feature){
+        [['IntersectionObserver', window.IntersectionObserver],['Promise', window.Promise], ['Object.assign', Object.assign], ['closest', docElem.closest], ['Array.prototype.includes', Array.prototype.includes], ['Array.from', Array.from]].forEach(function(feature){
             var tr = document.createElement('tr');
             tr.innerHTML = '<td>' + feature[0] + '</td><td>' + (!!(feature[1])) + '</td>';
             table.appendChild(tr);
